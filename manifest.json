@@ -1,0 +1,16 @@
+{
+  "name": "Penguins Galore!",
+  "version": "0.1",
+  "manifest_version": 2,
+  "browser_action": {
+    "default_icon": "16penguin.png"
+  },
+  "web_accessible_resources": ["penguins/*.jpg"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["penguins.js"]
+    }
+  ],
+  "permissions": ["tabs", "activeTab", "storage"]
+}
